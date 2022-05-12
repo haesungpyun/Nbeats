@@ -45,8 +45,3 @@ class NbeatsGeneric(nn.Module):
             residuals = (residuals - backcast)
             forecast = forecast + block_forecast
         return forecast
-
-
-model1 = NbeatsGeneric()
-x = t.tensor([np.arange(12)], dtype=t.float32)
-print(model1(x))
